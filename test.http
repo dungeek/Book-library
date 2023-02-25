@@ -1,0 +1,17 @@
+@url http://localhost:3000
+
+{{+request
+    request.headers['Content-Type'] = 'application/json';
+}}
+
+### Create a book
+POST {{url}}/books
+
+{
+    "title": "JavaScript is trash",
+    "price": -1
+}
+
+### Search a book by title
+GET {{url}}/books/search?title=JavaScript%20is%20trash
+
